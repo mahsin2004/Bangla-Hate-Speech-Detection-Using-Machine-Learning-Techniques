@@ -21,16 +21,27 @@ Following figure shows the most frequently used terms that express different typ
 
 <p align="center"><img src="final_words_cloud_hate.png?" width="400" height="350"></p>
 
-The dataset has 3,418 samples, which has the following distribution: 
+The dataset has 5,698 samples, which has the following distribution: 
 
-| Personal hate | Political hate | Religious hate | Geopoitical hate | Gender abusive hate |
-| ------------- | ------------- | ------------- | ------------- | -------------|
-| 629           |     1771      |     502       |     1179      |     316      |
+| Personal hate | Political hate | Religious hate | Geopolitical hate |
+| ------------- | ------------- | ------------- | ------------- |
+| 2189           |     814      |     957       |     1738      |
 
-Following columns describe different types of hate (i.e., label column in the [CSV file](https://github.com/mahsin2004/Bangla-Hate-Speech-Detection-Using-Machine-Learning-Techniques/blob/main/final_bengali_hate_speach_dataset.csv)):
-| Personal Hate | Political Hate |  Religious Hate | Geopoitical Hate | Gender abusive hate |
-| --------------------------| --------------------------| -------------| --------------------------| --------------------------| 
-| Hatred comment towards or directed towards a specific person | Hatred comment towards or directed towards a political group or person | Hatred comment towards or directed towards a specific religion | Hatred comment towards or directed towards a specific country, continent, or regions| Hatred comment towards or directed towards a specific gender | 
+Following columns describe different types of hate (i.e., label and target columns in the [CSV file](https://github.com/mahsin2004/Bangla-Hate-Speech-Detection-Using-Machine-Learning-Techniques/blob/main/final_bengali_hate_speach_dataset.csv)):
+| Label | Target | Description |
+| --------------------------| ------ | --------------------------|
+| Personal Hate | 0 | Hatred comment towards or directed towards a specific person |
+| Political Hate | 1 | Hatred comment towards or directed towards a political group or person |
+| Religious Hate | 2 | Hatred comment towards or directed towards a specific religion |
+| Geopolitical Hate | 3 | Hatred comment towards or directed towards a specific country, continent, or regions |
+
+### Machine Learning Results
+We have evaluated the dataset using standard Machine Learning techniques (Linear SVM and Logistic Regression) with TF-IDF vectorization and SMOTE for class balancing. The results are as follows:
+
+- **Linear SVM:** ~78% Accuracy
+- **Logistic Regression:** ~75% Accuracy
+
+For more details, please refer to the `demo.ipynb` notebook.
 
 Following are a few examples of Bengali hate speech, either directed or generalized towards a specific person, entity, or a group: 
 <p align="left"><img src="final_hate.png?" width="850" height="400"></p>
