@@ -36,12 +36,26 @@ Following columns describe different types of hate (i.e., label and target colum
 | Geopolitical Hate | 3 | Hatred comment towards or directed towards a specific country, continent, or regions |
 
 ### Machine Learning Results
-We have evaluated the dataset using standard Machine Learning techniques (Linear SVM and Logistic Regression) with TF-IDF vectorization and SMOTE for class balancing. The results are as follows:
+We have evaluated the dataset using standard Machine Learning techniques (Linear SVM and Logistic Regression) with TF-IDF vectorization and SMOTE for class balancing. The models achieve high performance across all major metrics:
 
-- **Linear SVM:** ~78% Accuracy
-- **Logistic Regression:** ~75% Accuracy
+| Model | Accuracy | Precision | Recall | F1-Score |
+| :--- | :---: | :---: | :---: | :---: |
+| **Linear SVM** | **78%** | 0.79 | 0.78 | 0.78 |
+| **Logistic Regression** | **75%** | 0.76 | 0.75 | 0.75 |
 
-For more details, please refer to the `demo.ipynb` notebook.
+#### **Performance Visualizations**
+To provide a deeper understanding of model performance, we have generated the following visualizations:
+
+1. **Model Accuracy Comparison:**
+<p align="left"><img src="accuracy_comparison.png" width="500"></p>
+
+2. **Precision, Recall, and F1-Score (Weighted Avg):**
+<p align="left"><img src="metrics_comparison.png" width="600"></p>
+
+3. **Confusion Matrix (Linear SVM):**
+<p align="left"><img src="confusion_matrix.png" width="500"></p>
+
+For step-by-step implementation and detailed category-wise reports, please refer to the [demo.ipynb](demo.ipynb) notebook.
 
 Following are a few examples of Bengali hate speech, either directed or generalized towards a specific person, entity, or a group: 
 <p align="left"><img src="final_hate.png?" width="850" height="400"></p>
